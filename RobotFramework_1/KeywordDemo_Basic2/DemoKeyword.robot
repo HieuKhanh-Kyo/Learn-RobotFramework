@@ -12,10 +12,10 @@ Test case 2
 
 *** Keywords ***
 Do Something
-    Log  I am doing something...
+    Log  I am doing something...!
 
 Do Something Else
-    Log  I am doing something else...
+    Log  I am doing something else...!
 
 Do Another Thing
-    Log  I am doing another thing...
+    Log  I am doing another thing...!

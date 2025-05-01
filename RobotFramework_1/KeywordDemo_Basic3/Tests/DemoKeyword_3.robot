@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation       Break Up Script Into Keyword
+Documentation       Break Up Script Into Keyword Example
 Library             SeleniumLibrary
 
 *** Test Cases ***
