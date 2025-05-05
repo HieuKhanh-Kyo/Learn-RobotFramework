@@ -1,11 +1,11 @@
 *** Settings ***
 Library             SeleniumLibrary
+Resource            ../Resources/PO/LandingPage.robot
 
 *** Keywords ***
-
 Search For Products
-    go to                           https://demowebshop.tricentis.com/
-    wait until page contains        Categories
+    LandingPage.Load
+    LandingPage.Verify Page Loaded
 
 Select Product From Search Results
     input text                      id=small-searchterms                        laptop

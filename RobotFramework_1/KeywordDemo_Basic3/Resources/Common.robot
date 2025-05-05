@@ -14,7 +14,7 @@ Custom Keyword 2
     log    dong keyword 2
 
 Begin Web Test
-    open browser                    about:blank                                 chrome
+    open browser                    about:blank       chrome
     maximize browser window
 
 End Web Test

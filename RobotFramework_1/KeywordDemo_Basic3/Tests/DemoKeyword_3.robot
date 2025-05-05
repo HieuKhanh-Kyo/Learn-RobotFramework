@@ -2,13 +2,11 @@
 Documentation       Break Up Script Into Keyword Example
 Library             SeleniumLibrary
 
-Resource            Study_RobotFramework/RobotFramework_1/KeywordDemo_Basic3/Resources/DemoWebShop_gui.robot
-Resource            Study_RobotFramework/RobotFramework_1/KeywordDemo_Basic3/Resources/Common.robot
+Resource            ../Resources/Common.robot       # for setup & teardown
+Resource            ../Resources/DemoWebShop_gui.robot      # for lower level keywords in test cases
 
-Suite Setup         Insert Testing Data
 Test Setup          Common.Begin Web Test
-Test Setup          Common.End Web Test
-Suite Teardown      Cleanup Testing Data
+Test Teardown       Common.End Web Test
 
 *** Test Cases ***
 User can search product
