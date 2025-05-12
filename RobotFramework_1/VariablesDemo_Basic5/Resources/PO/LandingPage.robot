@@ -3,7 +3,7 @@ Library         SeleniumLibrary
 
 *** Keywords ***
 Load
-    go to                           https://demowebshop.tricentis.com/
+    go to                           ${START_URL}
 
 Verify Page Loaded
     wait until page contains        Categories
