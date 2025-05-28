@@ -18,13 +18,15 @@ ${START_URL}        https://automationplayground.com/front-office/
 Should be able to access "Team" page
     [Documentation]    This is TestCase 1
     [Tags]             TC1
-    log                executing tc1
-    sleep              2s
-
+    FrontOfficeApp.Going to Landing Page
+    FrontOfficeApp.Go to "Team" page
 
 "Team" page should match requirements
     [Documentation]    This is TestCase 2
     [Tags]             TC2
     log                executing tc2
-    sleep              2s
+    FrontOfficeApp.Going to Landing Page
+    FrontOfficeApp.Go to "Team" page
+    FrontOfficeApp.Validate "Team" page
+
 

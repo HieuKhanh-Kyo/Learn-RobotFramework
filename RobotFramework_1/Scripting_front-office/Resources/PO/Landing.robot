@@ -4,8 +4,12 @@ Library             SeleniumLibrary
 
 
 *** Variables ***
+${LANDING_NAVIGATION_ELEMENT}          id=mainNav
 
 
 *** Keywords ***
-Load
+Navigate To
     go to           ${START_URL}
+
+Verify Page Loaded
+    wait until page contains element    ${LANDING_NAVIGATION_ELEMENT}
