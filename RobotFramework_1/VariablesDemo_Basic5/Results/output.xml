@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.6 on win32)" generated="2025-05-22T13:15:05.465064" rpa="false" schemaversion="5">
+<suite id="s1" name="Modifyvariables" source="E:\Python\Study_RobotFramework\RobotFramework_1\VariablesDemo_Basic5\tests\modifyvariables.robot">
+<test id="s1-t1" name="User can search product" line="17">
+<kw name="Begin Web Test" owner="Common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-22T13:15:05.694863" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-22T13:15:05.694863" elapsed="1.167450"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-22T13:15:06.862313" elapsed="0.034639"/>
+</kw>
+<status status="PASS" start="2025-05-22T13:15:05.694252" elapsed="1.202700"/>
+</kw>
+<kw name="Search For Products" owner="DemoVariables_gui">
+<kw name="Load" owner="LandingPage">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-22T13:15:06.898955" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
+<arg>${START_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-22T13:15:06.898955" elapsed="37.736637"/>
+</kw>
+<status status="PASS" start="2025-05-22T13:15:06.898955" elapsed="37.737719"/>
+</kw>
+<kw name="Verify Page Loaded" owner="LandingPage">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Categories</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-05-22T13:15:44.636674" elapsed="0.011664"/>
+</kw>
+<status status="PASS" start="2025-05-22T13:15:44.636674" elapsed="0.011664"/>
+</kw>
+<status status="PASS" start="2025-05-22T13:15:06.898955" elapsed="37.749383"/>
+</kw>
+<kw name="Select Product From Search Results" owner="DemoVariables_gui">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-22T13:15:44.650079" level="INFO">Typing text 'laptop' into text field 'id=small-searchterms'.</msg>
+<arg>id=small-searchterms</arg>
+<arg>${SEARCH_TERM}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T13:15:44.648952" elapsed="0.104138"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-22T13:15:44.754117" level="INFO">Clicking button 'Search'.</msg>
+<arg>Search</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T13:15:44.753090" elapsed="0.958656"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Search keyword:</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-05-22T13:15:45.712755" elapsed="0.009618"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-05-22T13:15:45.722373" level="INFO">Clicking link '/141-inch-laptop'.</msg>
+<arg>/141-inch-laptop</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T13:15:45.722373" elapsed="2.601081"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Unique Asian-influenced imprint wraps the laptop both inside and out</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-05-22T13:15:48.323454" elapsed="0.019376"/>
+</kw>
+<status status="PASS" start="2025-05-22T13:15:44.648952" elapsed="3.693878"/>
+</kw>
+<kw name="End Web Test" owner="Common" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-22T13:15:48.342830" elapsed="2.153427"/>
+</kw>
+<status status="PASS" start="2025-05-22T13:15:48.342830" elapsed="2.153427"/>
+</kw>
+<doc>The user can search laptop product</doc>
+<tag>DemoWebShop</tag>
+<tag>SearchProduct</tag>
+<status status="PASS" start="2025-05-22T13:15:05.691179" elapsed="44.806974"/>
+</test>
+<test id="s1-t2" name="User add a product to cart in the DemoWebShop" line="24">
+<kw name="Begin Web Test" owner="Common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-22T13:15:50.500197" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-22T13:15:50.500197" elapsed="1.195210"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-22T13:15:51.695407" elapsed="0.034413"/>
+</kw>
+<status status="PASS" start="2025-05-22T13:15:50.500197" elapsed="1.229623"/>
+</kw>
+<kw name="Search For Products" owner="DemoVariables_gui">
+<kw name="Load" owner="LandingPage">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-22T13:15:51.731816" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
+<arg>${START_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-22T13:15:51.730818" elapsed="15.927951"/>
+</kw>
+<status status="PASS" start="2025-05-22T13:15:51.730818" elapsed="15.927951"/>
+</kw>
+<kw name="Verify Page Loaded" owner="LandingPage">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Categories</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-05-22T13:16:07.659801" elapsed="0.027180"/>
+</kw>
+<status status="PASS" start="2025-05-22T13:16:07.658769" elapsed="0.029282"/>
+</kw>
+<status status="PASS" start="2025-05-22T13:15:51.730818" elapsed="15.957233"/>
+</kw>
+<kw name="Select Product From Search Results" owner="DemoVariables_gui">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-22T13:16:07.688565" level="INFO">Typing text 'laptop' into text field 'id=small-searchterms'.</msg>
+<arg>id=small-searchterms</arg>
+<arg>${SEARCH_TERM}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T13:16:07.688565" elapsed="0.127783"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-22T13:16:07.816348" level="INFO">Clicking button 'Search'.</msg>
+<arg>Search</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T13:16:07.816348" elapsed="1.082574"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Search keyword:</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-05-22T13:16:08.898922" elapsed="0.017241"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-05-22T13:16:08.918423" level="INFO">Clicking link '/141-inch-laptop'.</msg>
+<arg>/141-inch-laptop</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T13:16:08.918423" elapsed="5.605148"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Unique Asian-influenced imprint wraps the laptop both inside and out</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-05-22T13:16:14.526966" elapsed="0.012001"/>
+</kw>
+<status status="PASS" start="2025-05-22T13:16:07.688565" elapsed="6.850402"/>
+</kw>
+<kw name="Add Product To Cart" owner="DemoVariables_gui">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-22T13:16:14.540338" level="INFO">Clicking button 'id=add-to-cart-button-31'.</msg>
+<arg>id=add-to-cart-button-31</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T13:16:14.539708" elapsed="0.084819"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>The product has been added to your shopping cart</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-05-22T13:16:14.624527" elapsed="0.647593"/>
+</kw>
+<status status="PASS" start="2025-05-22T13:16:14.539708" elapsed="0.733462"/>
+</kw>
+<kw name="End Web Test" owner="Common" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-22T13:16:15.273170" elapsed="2.153041"/>
+</kw>
+<status status="PASS" start="2025-05-22T13:16:15.273170" elapsed="2.153041"/>
+</kw>
+<doc>The user add laptop product</doc>
+<tag>AddProduct</tag>
+<tag>DemoWebShop</tag>
+<status status="PASS" start="2025-05-22T13:15:50.500197" elapsed="26.928025"/>
+</test>
+<test id="s1-t3" name="User add a product to cart successfull in the DemoWebShop" line="32">
+<kw name="Begin Web Test" owner="Common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-22T13:16:17.428771" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-22T13:16:17.428771" elapsed="1.146140"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-22T13:16:18.575542" elapsed="0.032522"/>
+</kw>
+<status status="PASS" start="2025-05-22T13:16:17.428771" elapsed="1.179293"/>
+</kw>
+<kw name="Search For Products" owner="DemoVariables_gui">
+<kw name="Load" owner="LandingPage">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-22T13:16:18.609631" level="INFO">Opening url 'https://demowebshop.tricentis.com/'</msg>
+<arg>${START_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-22T13:16:18.608620" elapsed="29.120193"/>
+</kw>
+<status status="PASS" start="2025-05-22T13:16:18.608620" elapsed="29.120193"/>
+</kw>
+<kw name="Verify Page Loaded" owner="LandingPage">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Categories</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-05-22T13:16:47.728813" elapsed="0.013617"/>
+</kw>
+<status status="PASS" start="2025-05-22T13:16:47.728813" elapsed="0.014616"/>
+</kw>
+<status status="PASS" start="2025-05-22T13:16:18.608620" elapsed="29.134809"/>
+</kw>
+<kw name="Select Product From Search Results" owner="DemoVariables_gui">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-22T13:16:47.744778" level="INFO">Typing text 'laptop' into text field 'id=small-searchterms'.</msg>
+<arg>id=small-searchterms</arg>
+<arg>${SEARCH_TERM}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T13:16:47.743429" elapsed="0.091362"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-22T13:16:47.834791" level="INFO">Clicking button 'Search'.</msg>
+<arg>Search</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T13:16:47.834791" elapsed="1.308253"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Search keyword:</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-05-22T13:16:49.143044" elapsed="0.015575"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-05-22T13:16:49.159674" level="INFO">Clicking link '/141-inch-laptop'.</msg>
+<arg>/141-inch-laptop</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T13:16:49.158619" elapsed="2.264048"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Unique Asian-influenced imprint wraps the laptop both inside and out</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-05-22T13:16:51.423683" elapsed="0.011093"/>
+</kw>
+<status status="PASS" start="2025-05-22T13:16:47.743429" elapsed="3.692364"/>
+</kw>
+<kw name="Add Product To Cart" owner="DemoVariables_gui">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-22T13:16:51.436812" level="INFO">Clicking button 'id=add-to-cart-button-31'.</msg>
+<arg>id=add-to-cart-button-31</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T13:16:51.436812" elapsed="0.063141"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>The product has been added to your shopping cart</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-05-22T13:16:51.499953" elapsed="0.456875"/>
+</kw>
+<status status="PASS" start="2025-05-22T13:16:51.435793" elapsed="0.521035"/>
+</kw>
+<kw name="Check The Cart" owner="DemoVariables_gui">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-05-22T13:16:51.957834" level="INFO">Clicking link '/cart'.</msg>
+<arg>/cart</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-22T13:16:51.956828" elapsed="1.054271"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Shopping cart</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-05-22T13:16:53.011099" elapsed="0.013400"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>14.1-inch Laptop</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-05-22T13:16:53.024499" elapsed="0.014022"/>
+</kw>
+<status status="PASS" start="2025-05-22T13:16:51.956828" elapsed="1.081693"/>
+</kw>
+<kw name="End Web Test" owner="Common" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-22T13:16:53.039529" elapsed="2.196506"/>
+</kw>
+<status status="PASS" start="2025-05-22T13:16:53.038521" elapsed="2.198660"/>
+</kw>
+<doc>The user add laptop product</doc>
+<tag>AddProductSuccessful</tag>
+<tag>DemoWebShop</tag>
+<status status="PASS" start="2025-05-22T13:16:17.428771" elapsed="37.808410"/>
+</test>
+<doc>Break Up Script Into Keyword Example</doc>
+<status status="PASS" start="2025-05-22T13:15:05.471033" elapsed="109.768403"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">AddProduct</stat>
+<stat pass="1" fail="0" skip="0">AddProductSuccessful</stat>
+<stat pass="3" fail="0" skip="0">DemoWebShop</stat>
+<stat pass="1" fail="0" skip="0">SearchProduct</stat>
+</tag>
+<suite>
+<stat name="Modifyvariables" id="s1" pass="3" fail="0" skip="0">Modifyvariables</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

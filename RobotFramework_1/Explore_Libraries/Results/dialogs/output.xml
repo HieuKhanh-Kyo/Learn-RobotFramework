@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.6 on win32)" generated="2025-05-28T12:33:52.766471" rpa="false" schemaversion="5">
+<suite id="s1" name="Dialogs" source="E:\Python\Study_RobotFramework\RobotFramework_1\Explore_Libraries\tests\dialogs.robot">
+<test id="s1-t1" name="Logged out user can search for products" line="17">
+<kw name="Begin Web Test" owner="Common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-28T12:33:53.038049" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-28T12:33:53.038049" elapsed="33.050588"/>
+</kw>
+<status status="PASS" start="2025-05-28T12:33:53.038049" elapsed="33.050588"/>
+</kw>
+<kw name="Get Selection From User" owner="Dialogs">
+<msg time="2025-05-28T12:34:57.664010" level="INFO">${new_browser} = chrome</msg>
+<var>${new_browser}</var>
+<arg>Which browser?</arg>
+<arg>chrome</arg>
+<arg>ie</arg>
+<arg>firefox</arg>
+<doc>Pauses execution and asks user to select a value.</doc>
+<status status="PASS" start="2025-05-28T12:34:26.089859" elapsed="31.575157"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-05-28T12:34:57.665016" level="INFO">${BROWSER} = chrome</msg>
+<arg>${BROWSER}</arg>
+<arg>${new_browser}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-05-28T12:34:57.665016" elapsed="0.000000"/>
+</kw>
+<kw name="Search for Products" owner="AmazonApp">
+<kw name="Load" owner="LandingPage">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-28T12:34:57.666136" level="INFO">Opening url 'https://www.amazon.com'</msg>
+<arg>${START_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-28T12:34:57.666136" elapsed="1.366971"/>
+</kw>
+<status status="PASS" start="2025-05-28T12:34:57.666136" elapsed="1.368015"/>
+</kw>
+<kw name="Verify Page Loaded" owner="LandingPage">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<msg time="2025-05-28T12:35:04.249525" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-28T12:35:04.249525" level="FAIL">Text 'Sell' did not appear in 5 seconds.</msg>
+<arg>Sell</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="FAIL" start="2025-05-28T12:34:59.034151" elapsed="5.250204">Text 'Sell' did not appear in 5 seconds.</status>
+</kw>
+<status status="FAIL" start="2025-05-28T12:34:59.034151" elapsed="5.250204">Text 'Sell' did not appear in 5 seconds.</status>
+</kw>
+<kw name="Search for Products" owner="TopNav">
+<status status="NOT RUN" start="2025-05-28T12:35:04.284355" elapsed="0.000000"/>
+</kw>
+<kw name="Verify Search Completed" owner="SearchResults">
+<status status="NOT RUN" start="2025-05-28T12:35:04.285443" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-05-28T12:34:57.666136" elapsed="6.619307">Text 'Sell' did not appear in 5 seconds.</status>
+</kw>
+<kw name="End Web Test" owner="Common" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-28T12:35:04.285813" elapsed="2.123017"/>
+</kw>
+<status status="PASS" start="2025-05-28T12:35:04.285813" elapsed="2.123017"/>
+</kw>
+<tag>Web</tag>
+<status status="FAIL" start="2025-05-28T12:33:53.038049" elapsed="73.371792">Text 'Sell' did not appear in 5 seconds.</status>
+</test>
+<test id="s1-t2" name="Logged out user can add product to cart" line="23">
+<kw name="Begin Web Test" owner="Common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-28T12:35:06.413521" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-28T12:35:06.412190" elapsed="1.171912"/>
+</kw>
+<status status="PASS" start="2025-05-28T12:35:06.412190" elapsed="1.171912"/>
+</kw>
+<kw name="Search for Products" owner="AmazonApp">
+<kw name="Load" owner="LandingPage">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-28T12:35:07.584102" level="INFO">Opening url 'https://www.amazon.com'</msg>
+<arg>${START_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-28T12:35:07.584102" elapsed="1.497087"/>
+</kw>
+<status status="PASS" start="2025-05-28T12:35:07.584102" elapsed="1.497087"/>
+</kw>
+<kw name="Verify Page Loaded" owner="LandingPage">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<msg time="2025-05-28T12:35:14.289929" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-28T12:35:14.290439" level="FAIL">Text 'Sell' did not appear in 5 seconds.</msg>
+<arg>Sell</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="FAIL" start="2025-05-28T12:35:09.082365" elapsed="5.208074">Text 'Sell' did not appear in 5 seconds.</status>
+</kw>
+<status status="FAIL" start="2025-05-28T12:35:09.081189" elapsed="5.209250">Text 'Sell' did not appear in 5 seconds.</status>
+</kw>
+<kw name="Search for Products" owner="TopNav">
+<status status="NOT RUN" start="2025-05-28T12:35:14.290968" elapsed="0.000000"/>
+</kw>
+<kw name="Verify Search Completed" owner="SearchResults">
+<status status="NOT RUN" start="2025-05-28T12:35:14.290968" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-05-28T12:35:07.584102" elapsed="6.706866">Text 'Sell' did not appear in 5 seconds.</status>
+</kw>
+<kw name="Execute Manual Step" owner="Dialogs">
+<arg>Do something manually!</arg>
+<arg>It failed!</arg>
+<doc>Pauses execution until user sets the keyword status.</doc>
+<status status="NOT RUN" start="2025-05-28T12:35:14.290968" elapsed="0.000000"/>
+</kw>
+<kw name="Select Product from Search Results" owner="AmazonApp">
+<status status="NOT RUN" start="2025-05-28T12:35:14.291510" elapsed="0.000000"/>
+</kw>
+<kw name="Pause Execution" owner="Dialogs">
+<doc>Pauses execution until user clicks ``Ok`` button.</doc>
+<status status="NOT RUN" start="2025-05-28T12:35:14.291510" elapsed="0.000000"/>
+</kw>
+<kw name="Add Product to Cart" owner="AmazonApp">
+<status status="NOT RUN" start="2025-05-28T12:35:14.291510" elapsed="0.000000"/>
+</kw>
+<kw name="End Web Test" owner="Common" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-28T12:35:14.292019" elapsed="2.109900"/>
+</kw>
+<status status="PASS" start="2025-05-28T12:35:14.292019" elapsed="2.109900"/>
+</kw>
+<tag>Web</tag>
+<status status="FAIL" start="2025-05-28T12:35:06.411163" elapsed="9.991940">Text 'Sell' did not appear in 5 seconds.</status>
+</test>
+<doc>These are some web tests</doc>
+<status status="FAIL" start="2025-05-28T12:33:52.778306" elapsed="83.626707"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="2" skip="0">Web</stat>
+</tag>
+<suite>
+<stat name="Dialogs" id="s1" pass="0" fail="2" skip="0">Dialogs</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

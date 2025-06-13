@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.6 on win32)" generated="2025-05-06T21:19:26.922722" rpa="false" schemaversion="5">
+<suite id="s1" name="Demokeyword 3" source="E:\Python\Study_RobotFramework\RobotFramework_1\KeywordDemo_Basic3\tests\demokeyword_3.robot">
+<test id="s1-t1" name="User can search product" line="12">
+<kw name="Begin Web Test" owner="Common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-06T21:19:27.129713" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-06T21:19:27.129713" elapsed="1.207144"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-06T21:19:28.336857" elapsed="0.023256"/>
+</kw>
+<status status="PASS" start="2025-05-06T21:19:27.129713" elapsed="1.230400"/>
+</kw>
+<kw name="Search For Products" owner="DemoWebShop_gui">
+<kw name="Load" owner="LandingPage">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-06T21:19:28.364238" level="FAIL">Keyword 'SeleniumLibrary.Go To' expected 1 argument, got 2.</msg>
+<arg>https://demowebshop.tricentis.com/</arg>
+<arg>chrome</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="FAIL" start="2025-05-06T21:19:28.363903" elapsed="0.000335">Keyword 'SeleniumLibrary.Go To' expected 1 argument, got 2.</status>
+</kw>
+<status status="FAIL" start="2025-05-06T21:19:28.363485" elapsed="0.000753">Keyword 'SeleniumLibrary.Go To' expected 1 argument, got 2.</status>
+</kw>
+<kw name="Verify Page Loaded" owner="LandingPage">
+<status status="NOT RUN" start="2025-05-06T21:19:28.364238" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-05-06T21:19:28.360113" elapsed="0.004125">Keyword 'SeleniumLibrary.Go To' expected 1 argument, got 2.</status>
+</kw>
+<kw name="Select Product From Search Results" owner="DemoWebShop_gui">
+<status status="NOT RUN" start="2025-05-06T21:19:28.365236" elapsed="0.000000"/>
+</kw>
+<kw name="End Web Test" owner="Common" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-06T21:19:28.365236" elapsed="2.094555"/>
+</kw>
+<status status="PASS" start="2025-05-06T21:19:28.365236" elapsed="2.094555"/>
+</kw>
+<doc>The user can search laptop product</doc>
+<tag>DemoWebShop</tag>
+<tag>SearchProduct</tag>
+<status status="FAIL" start="2025-05-06T21:19:27.129713" elapsed="3.330078">Keyword 'SeleniumLibrary.Go To' expected 1 argument, got 2.</status>
+</test>
+<test id="s1-t2" name="User add a product to cart successfull in the DemoWebShop" line="19">
+<kw name="Begin Web Test" owner="Common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-06T21:19:30.459791" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-06T21:19:30.459791" elapsed="1.147921"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-06T21:19:31.607712" elapsed="0.019017"/>
+</kw>
+<status status="PASS" start="2025-05-06T21:19:30.459791" elapsed="1.166938"/>
+</kw>
+<kw name="Search For Products" owner="DemoWebShop_gui">
+<kw name="Load" owner="LandingPage">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-06T21:19:31.626729" level="FAIL">Keyword 'SeleniumLibrary.Go To' expected 1 argument, got 2.</msg>
+<arg>https://demowebshop.tricentis.com/</arg>
+<arg>chrome</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="FAIL" start="2025-05-06T21:19:31.626729" elapsed="0.000000">Keyword 'SeleniumLibrary.Go To' expected 1 argument, got 2.</status>
+</kw>
+<status status="FAIL" start="2025-05-06T21:19:31.626729" elapsed="0.000000">Keyword 'SeleniumLibrary.Go To' expected 1 argument, got 2.</status>
+</kw>
+<kw name="Verify Page Loaded" owner="LandingPage">
+<status status="NOT RUN" start="2025-05-06T21:19:31.626729" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-05-06T21:19:31.626729" elapsed="0.000000">Keyword 'SeleniumLibrary.Go To' expected 1 argument, got 2.</status>
+</kw>
+<kw name="Select Product From Search Results" owner="DemoWebShop_gui">
+<status status="NOT RUN" start="2025-05-06T21:19:31.628174" elapsed="0.000000"/>
+</kw>
+<kw name="Add Product To Cart" owner="DemoWebShop_gui">
+<status status="NOT RUN" start="2025-05-06T21:19:31.628174" elapsed="0.000000"/>
+</kw>
+<kw name="Check The Cart" owner="DemoWebShop_gui">
+<status status="NOT RUN" start="2025-05-06T21:19:31.628174" elapsed="0.000000"/>
+</kw>
+<kw name="End Web Test" owner="Common" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-06T21:19:31.629213" elapsed="2.090024"/>
+</kw>
+<status status="PASS" start="2025-05-06T21:19:31.628174" elapsed="2.091063"/>
+</kw>
+<doc>The user add laptop product</doc>
+<tag>AddProduct</tag>
+<tag>DemoWebShop</tag>
+<status status="FAIL" start="2025-05-06T21:19:30.459791" elapsed="3.259446">Keyword 'SeleniumLibrary.Go To' expected 1 argument, got 2.</status>
+</test>
+<doc>Break Up Script Into Keyword Example</doc>
+<status status="FAIL" start="2025-05-06T21:19:26.922722" elapsed="6.796515"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">AddProduct</stat>
+<stat pass="0" fail="2" skip="0">DemoWebShop</stat>
+<stat pass="0" fail="1" skip="0">SearchProduct</stat>
+</tag>
+<suite>
+<stat name="Demokeyword 3" id="s1" pass="0" fail="2" skip="0">Demokeyword 3</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
